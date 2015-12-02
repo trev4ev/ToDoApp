@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ToDo List</title>
+        <link href = 'todo.css' type = "text/css" rel = 'stylesheet'>
+    </head>
+    <body>
+        <div id = 'top'>
+            <input type = text id = 'input'>
+            <button type = 'button' onclick= 'add()'>Add</button>
+        </div>    
+        <div id = 'main'>
+        </div>
+            
+        <script> 
+            function add()
+            {
+                var string = document.getElementById('input').value;
+                var x = document.createElement("P");
+                var y = document.createTextNode(string);
+                x.appendChild(y);
+                document.getElementById('main').appendChild(x);
+                x.addEventListener('click',function(ev){
+                    document.getElementById('main').removeChild(x);
+                },false);
+                document.getElementById('input').value = "";
+            }
+        </script>
+    </body>
+</html>

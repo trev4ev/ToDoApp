@@ -1,0 +1,25 @@
+div {
+    width: 70vw;
+    margin: auto;
+    margin-top: 2.5vw;
+    background-color: rgb(255, 216, 128);
+    border: 5px solid rgb(255, 200, 75);
+    border-radius: 0.5vw;
+    text-align: center;
+}
+
+#main {
+    margin-top: 2vw;
+    height: 75vh;
+}
+
+input {
+    width: 70%;
+    height: 35px;
+    margin: 5px;
+    text-align: right;
+}
+
+button {
+    width: 10%;
+}
