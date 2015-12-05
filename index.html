@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>ToDo List</title>
+        <meta charset="UTF-8">
         <link href = 'todo.css' type = "text/css" rel = 'stylesheet'>
     </head>
     <body>
@@ -21,6 +22,7 @@
                     return;
                 }
                 var x = document.createElement("P");
+                string = string.replace(/\s/g, '\xa0');
                 var y = document.createTextNode(string);
                 x.appendChild(y);
                 document.getElementById('main').appendChild(x);
