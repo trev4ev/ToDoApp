@@ -26,8 +26,18 @@
                 var y = document.createTextNode(string);
                 x.appendChild(y);
                 document.getElementById('main').appendChild(x);
-                x.addEventListener('click',function(ev){
-                    document.getElementById('main').removeChild(x);
+                x.addEventListener('click',function(){
+                    if(x.style.textDecoration == "line-through")
+                    {
+                        x.style.textDecoration = "none";
+                    }
+                    else{
+                        x.style.textDecoration = "line-through";
+                    }
+                    
+                },false);
+                x.addEventListener('dblclick',function(){
+                    document.getElementById('main').removeChild(x);                   
                 },false);
                 document.getElementById('input').value = "";
             }

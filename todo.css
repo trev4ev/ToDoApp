@@ -3,30 +3,16 @@ div {
     margin: auto;
     margin-top: 2.5vw;
     background-color: transparent;
-    border: 5px solid white;
-    border-radius: 0.5vw;
+    border: 3px solid white;
     text-align: center;
     vertical-align: middle;
-}
-
-input[type=text], textarea {
-  -webkit-transition: box-shadow 0.30s ease-in-out;
-  -moz-transition: box-shadow 0.30s ease-in-out;
-  -ms-transition: box-shadow 0.30s ease-in-out;
-  -o-transition: box-shadow 0.30s ease-in-out;
-  outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD;
-}
- 
-input[type=text]:focus, textarea:focus {
-  box-shadow: 0 0 15px rgb(95, 75, 181);
 }
 
 #main {
     border: none;
     margin-top: 2vw;
+    width: 40vw;
+    text-align: left;
 }
 
 #input {
@@ -37,13 +23,18 @@ input[type=text]:focus, textarea:focus {
     text-align: center;
     font-size: 26px;
     vertical-align: middle;
-    color: rgb(135, 107, 255);
+    color: white;
+    background-color: transparent;
+    border: solid 3px white;
+}
+
+input[type=text]:focus, textarea:focus {
+  outline: none;
 }
 
 button {
     width: 8%;
     height: 38px;
-    border-radius: 0.5vw;
     border: solid 3px white;
     background-color: transparent;
     color: white;
@@ -64,4 +55,10 @@ button:hover {
 
 body {
     background-color: rgb(183, 166, 255);
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
 }
