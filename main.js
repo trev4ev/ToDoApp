@@ -63,7 +63,7 @@ var count = 0;
             function checkCount() {
                 if (count == 0)
                 {
-                    document.getElementById('main').getElementsByTagName('h1')[0].innerHTML = '"Working hard or hardly working?';
+                    document.getElementById('main').getElementsByTagName('h1')[0].innerHTML = '"Working hard or hardly working?"';
                 }
                 else
                 {
