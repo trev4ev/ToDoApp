@@ -32,20 +32,26 @@ function addString(k, val)
     checkCount();
     x.addEventListener('click',function(){
         setTimeout(function(){
-            console.log(fb.child(x.id).val());
+            fb.child(x.id).once('value', function(snapshot) 
+            {
+                if(snapshot.val() == 'i')
+                {
+                    fb.child(x.id).set("a");
+                }
+                else if(snapshot.val() == 'a')
+                {
+                    fb.child(x.id).set("i");
+                }
+            });
             if(x.style.color == "rgb(75, 75, 75)")
             {
                 x.style.color = "rgb(0, 226, 17)";
                 x.style.borderColor = "white";
-                if(fb.child(x.id).val() == 'i')
-                    fb.child(x.id).set('a');
             }
             else
             {
                 x.style.color = "rgb(75, 75, 75)";
                 x.style.borderColor = "rgb(75, 75, 75)";
-                if(fb.child(x.id).val() == 'a')
-                    fb.child(x.id).set('i');
             }
         },170);
 
@@ -55,7 +61,6 @@ function addString(k, val)
         fb.child(x.id).remove();
         count--;
         checkCount();
-        console.log(count);
     },false);
     x.addEventListener('mouseenter',function(){
         if(x.style.color == "rgb(0, 226, 17)")
@@ -93,18 +98,23 @@ function add()
     checkCount();
     x.addEventListener('click',function(){
         setTimeout(function(){
+            var active = '';
+            fb.child(x.id).once('value', function(snapshot) 
+            {
+                active = snapshot.val();
+            });
             if(x.style.color == "rgb(75, 75, 75)")
             {
                 x.style.color = "rgb(0, 226, 17)";
                 x.style.borderColor = "white";
-                if(fb.child(x.id).val() == 'i')
+                if(active == 'i')
                     fb.child(x.id).set('a');
             }
             else
             {
                 x.style.color = "rgb(75, 75, 75)";
                 x.style.borderColor = "rgb(75, 75, 75)";
-                if(fb.child(x.id).val() == 'a')
+                if(active == 'a')
                     fb.child(x.id).set('i');
             }
         },170);
