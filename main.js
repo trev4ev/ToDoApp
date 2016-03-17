@@ -96,13 +96,15 @@ function add()
             {
                 x.style.color = "rgb(0, 226, 17)";
                 x.style.borderColor = "white";
-                fb.child(x.id).set('a');
+                if(fb.child(x.id).val() == 'i')
+                    fb.child(x.id).set('a');
             }
             else
             {
                 x.style.color = "rgb(75, 75, 75)";
                 x.style.borderColor = "rgb(75, 75, 75)";
-                fb.child(x.id).set('i');
+                if(fb.child(x.id).val() == 'a')
+                    fb.child(x.id).set('i');
             }
         },170);
 
