@@ -32,6 +32,7 @@ function addString(k, val)
     checkCount();
     x.addEventListener('click',function(){
         setTimeout(function(){
+            console.log(fb.child(x.id).val());
             if(x.style.color == "rgb(75, 75, 75)")
             {
                 x.style.color = "rgb(0, 226, 17)";
