@@ -16,7 +16,7 @@ function addString(k, val)
     k = k.replace(/\s/g, '\xa0');
     var y = document.createTextNode(k);
     x.appendChild(y);
-    x.style.border = "2px solid white";
+    x.style.border = "2px solid black";
     if(val == 'i')
     {
         x.style.color = "rgb(75, 75, 75)";        
@@ -24,7 +24,7 @@ function addString(k, val)
     }
     else 
     {
-        x.style.color = "rgb(0, 226, 17)";
+        x.style.color = "rgb(0, 28, 147)";
         
     }
     document.getElementById('main').appendChild(x);
@@ -45,8 +45,8 @@ function addString(k, val)
             });
             if(x.style.color == "rgb(75, 75, 75)")
             {
-                x.style.color = "rgb(0, 226, 17)";
-                x.style.borderColor = "white";
+                x.style.color = "rgb(0, 28, 147)";
+                x.style.borderColor = "black";
             }
             else
             {
@@ -63,15 +63,15 @@ function addString(k, val)
         checkCount();
     },false);
     x.addEventListener('mouseenter',function(){
-        if(x.style.color == "rgb(0, 226, 17)")
+        if(x.style.color == "rgb(0, 28, 147)")
         {
-            x.style.borderColor = "rgb(0, 226, 17)";
+            x.style.borderColor = "rgb(0, 28, 147)";
         }
     },false);
     x.addEventListener('mouseleave',function(){
-        if(x.style.color == "rgb(0, 226, 17)")
+        if(x.style.color == "rgb(0, 28, 147)")
         {
-            x.style.borderColor = "white";
+            x.style.borderColor = "black";
         }
     },false);
 };
@@ -91,8 +91,8 @@ function add()
     string = string.replace(/\s/g, '\xa0');
     var y = document.createTextNode(string);
     x.appendChild(y);
-    x.style.color = "rgb(0, 226, 17)";
-    x.style.border = "2px solid white";
+    x.style.color = "rgb(0, 28, 147)";
+    x.style.border = "2px solid black";
     document.getElementById('main').appendChild(x);
     count++;
     checkCount();
@@ -105,8 +105,8 @@ function add()
             });
             if(x.style.color == "rgb(75, 75, 75)")
             {
-                x.style.color = "rgb(0, 226, 17)";
-                x.style.borderColor = "white";
+                x.style.color = "rgb(0, 28, 147)";
+                x.style.borderColor = "black";
                 if(active == 'i')
                     fb.child(x.id).set('a');
             }
@@ -127,15 +127,15 @@ function add()
         checkCount();
     },false);
     x.addEventListener('mouseenter',function(){
-        if(x.style.color == "rgb(0, 226, 17)")
+        if(x.style.color == "rgb(0, 28, 147)")
         {
-            x.style.borderColor = "rgb(0, 226, 17)";
+            x.style.borderColor = "rgb(0, 28, 147)";
         }
     },false);
     x.addEventListener('mouseleave',function(){
-        if(x.style.color == "rgb(0, 226, 17)")
+        if(x.style.color == "rgb(0, 28, 147)")
         {
-            x.style.borderColor = "white";
+            x.style.borderColor = "black";
         }
     },false);
     document.getElementById('input').value = "";
