@@ -9,7 +9,7 @@ div {
     margin: auto;
     margin-top: 2.5vw;
     background-color: transparent;
-    border: 3px solid black;
+    border: 3px solid white;
     text-align: center;
     vertical-align: middle;
 }
@@ -29,9 +29,9 @@ div {
     text-align: center;
     font-size: 26px;
     vertical-align: middle;
-    color: rgb(0, 28, 147);
+    color: rgb(0, 226, 17);
     background-color: transparent;
-    border: solid 3px black;
+    border: solid 3px white;
 }
 
 input[type=text]:focus, textarea:focus {
@@ -41,9 +41,9 @@ input[type=text]:focus, textarea:focus {
 button {
     width: 8%;
     height: 42px;
-    border: solid 3px black;
+    border: solid 3px white;
     background-color: transparent;
-    color: rgb(0, 28, 147);
+    color: rgb(0, 226, 17);
     margin: 1%;
     vertical-align: middle;
     font-size: 18px;
@@ -54,12 +54,12 @@ button {
 }
 
 button:hover {
-    border-color: rgb(0, 28, 147);
+    border-color: rgb(0, 226, 17);
 }
 
 
 body {
-    background-color: #ebebeb;
+    background-color: black;
 }
 
 p {
